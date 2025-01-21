@@ -49,7 +49,7 @@ local IY = MenuTab:CreateButton({
                })
 })
 local Krunox = MenuTab:CreateButton({
-      Name = "Button Example",
+      Name = "Krunox",
          Callback = function()
             loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Krunox-13336"))()
                end,
