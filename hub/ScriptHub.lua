@@ -35,3 +35,23 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
+local InfoTab = Window:CreateTab("Info", "info")
+
+local YruLabel = InfoTab:CreateLabel("You are currently using eQploit team's script hub", 97829744162691, Color3.fromRGB(50, 50, 150), false) -- Title, Icon, Color, IgnoreTheme
+
+local MenuTab = Window:CreateTab("Menus/Admins", "app-window")
+
+local IY = MenuTab:CreateButton({
+      Name = "Infinite Yield",
+         Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+               end,
+               })
+})
+local Krunox = MenuTab:CreateButton({
+      Name = "Button Example",
+         Callback = function()
+            loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Krunox-13336"))()
+               end,
+               })
+})
