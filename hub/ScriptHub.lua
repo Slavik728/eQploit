@@ -39,7 +39,7 @@ local InfoTab = Window:CreateTab("Info", "info")
 
 local YruLabel = InfoTab:CreateLabel("You are currently using eQploit team's script hub", 114282498599210, Color3.fromRGB(50, 50, 150), false) -- Title, Icon, Color, IgnoreTheme
 
-local MenuTab = Window:CreateTab("Menus/Admins", "app-window")
+local MenuTab = Window:CreateTab("Menus/Admins/Hubs", "app-window")
 
 local IY = MenuTab:CreateButton({
       Name = "Infinite Yield",
@@ -51,5 +51,11 @@ local Krunox = MenuTab:CreateButton({
       Name = "Krunox",
          Callback = function()
             loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Krunox-13336"))()
+               end,
+})
+local Idk = MenuTab:CreateButton({
+      Name = "Skyhub trolling gui",
+         Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
                end,
 })
