@@ -1,8 +1,7 @@
 -- w.i.p.
 Players = game:GetService('Players')
-LocalRoot = Players.LocalPlayer.Character.HumanoidRootPart
-
 LocalPlayer = Players.LocalPlayer
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
@@ -77,11 +76,12 @@ local ABtoggle = ToolTab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(ABBool)
+      LocalRoot = LocalPlayer.Character.HumanoidRootPart
       if ABBool then
          local destroyHeight = game.Workspace.FallenPartsDestroyHeight
          originalPos = LocalRoot.CFrame
          LocalRoot.CFrame = CFrame.new(0, destroyHeight+1.5, 0) * CFrame.fromEulerAngles(math.rad(90), 0, 0)
-         task.wait(0.1) LocalRoot.Anchored = true
+         task.wait(0.05) LocalRoot.Anchored = true
       else
          if originalPos ~= nil then
             LocalRoot.CFrame = originalPos
