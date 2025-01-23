@@ -46,12 +46,10 @@ local IY = MenuTab:CreateButton({
          Callback = function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
                end,
-               })
 })
 local Krunox = MenuTab:CreateButton({
       Name = "Krunox",
          Callback = function()
             loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Krunox-13336"))()
                end,
-               })
 })
