@@ -83,8 +83,10 @@ local ABtoggle = ToolTab:CreateToggle({
          LocalRoot.CFrame = CFrame.new(0, destroyHeight+1.5, 0) * CFrame.fromEulerAngles(math.rad(90), 0, 0)
          task.wait(0.1) LocalRoot.Anchored = true
       else
-         LocalRoot.CFrame = originalPos
-         LocalRoot.Anchored = false
+         if originalPos ~= nil then
+            LocalRoot.CFrame = originalPos
+            LocalRoot.Anchored = false
+         end
       end
    end,
 })
