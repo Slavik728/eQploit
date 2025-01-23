@@ -85,5 +85,6 @@ local ABtoggle = ToolTab:CreateToggle({
       else
          LocalRoot.CFrame = originalPos
          LocalRoot.Anchored = false
+      end
    end,
 })
