@@ -1,4 +1,8 @@
 -- w.i.p.
+Players = game:GetService('Players')
+LocalRoot = Players.LocalPlayer.Character.HumanoidRootPart
+
+LocalPlayer = Players.LocalPlayer
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
@@ -38,6 +42,12 @@ local Window = Rayfield:CreateWindow({
 local InfoTab = Window:CreateTab("Info", "info")
 
 local YruLabel = InfoTab:CreateLabel("You are currently using eQploit team's script hub", 114282498599210, Color3.fromRGB(50, 50, 150), false) -- Title, Icon, Color, IgnoreTheme
+local copyDc = InfoTab:CreateButton({
+      Name = "Copy discord",
+         Callback = function()
+            setclipboard("https://discord.gg/3wdGWjy5UJ")
+               end,
+})
 
 local MenuTab = Window:CreateTab("Menus/Admins/Hubs", "app-window")
 
@@ -54,8 +64,26 @@ local Krunox = MenuTab:CreateButton({
                end,
 })
 local Idk = MenuTab:CreateButton({
-      Name = "Skyhub trolling gui",
-         Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
-               end,
+   Name = "Skyhub trolling gui",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
+   end,
+})
+
+local ToolTab = Window:CreateTab("Tools", "wrench")
+
+local ABtoggle = ToolTab:CreateToggle({
+   Name = "AntiBang",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(ABBool)
+      if ABBool then
+         local destroyHeight = game.Workspace.FallenPartsDestroyHeight
+         local originalPos = LocalRoot.CFrame
+         LocalRoot.CFrame = CFrame.new(0, destroyHeight+1.5, 0) * CFrame.fromEulerAngles(math.rad(90), 0, 0)
+         task.wait(0.1) LocalRoot.Anchored = true
+      else
+         LocalRoot.CFrame = originalPos
+         LocalRoot.Anchored = false
+   end,
 })
