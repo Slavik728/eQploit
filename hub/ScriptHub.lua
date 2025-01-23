@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "eQploit script hub",
-   Icon = 97829744162691, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   Icon = 114282498599210, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "eQploit hub",
    LoadingSubtitle = "by s728",
    Theme = "DarkBlue", -- Check https://docs.sirius.menu/rayfield/configuration/themes
@@ -37,7 +37,7 @@ local Window = Rayfield:CreateWindow({
 
 local InfoTab = Window:CreateTab("Info", "info")
 
-local YruLabel = InfoTab:CreateLabel("You are currently using eQploit team's script hub", 97829744162691, Color3.fromRGB(50, 50, 150), false) -- Title, Icon, Color, IgnoreTheme
+local YruLabel = InfoTab:CreateLabel("You are currently using eQploit team's script hub", 114282498599210, Color3.fromRGB(50, 50, 150), false) -- Title, Icon, Color, IgnoreTheme
 
 local MenuTab = Window:CreateTab("Menus/Admins", "app-window")
 
