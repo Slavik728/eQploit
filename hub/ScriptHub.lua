@@ -86,6 +86,7 @@ local ABtoggle = ToolTab:CreateToggle({
          if originalPos ~= nil then
             LocalRoot.CFrame = originalPos
             LocalRoot.Anchored = false
+            LocalPlayer.Character.Humanoid.PlatformStand = true
             LocalPlayer.Character.Humanoid.PlatformStand = false
          end
       end
