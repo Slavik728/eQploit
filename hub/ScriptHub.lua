@@ -9,10 +9,10 @@ end
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "eQploit script hub",
+   Name = "eQhub",
    Icon = 114282498599210, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "eQploit hub",
-   LoadingSubtitle = "by s728",
+   LoadingSubtitle = "by eQploit team",
    Theme = "DarkBlue", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
@@ -100,8 +100,8 @@ local ABtoggle = ToolTab:CreateToggle({
          task.wait(0.05) LocalRoot().Anchored = true
       else
          if originalPos ~= nil then
-            LocalRoot().CFrame = originalPos
             LocalRoot().Anchored = false
+            LocalRoot().CFrame = originalPos
          end
       end
    end,
