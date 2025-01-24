@@ -71,6 +71,19 @@ local Idk = MenuTab:CreateButton({
 
 local ToolTab = Window:CreateTab("Tools", "wrench")
 
+local FaceDownToggle = ToolTab:CreateToggle({
+   Name = "Look down AntiBang",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(ABFacebool)
+      if ABFacebool then
+         ABDegree = -90
+      else
+         ABDegree = 90
+      end
+   end,
+})
+
 local ABtoggle = ToolTab:CreateToggle({
    Name = "AntiBang",
    CurrentValue = false,
@@ -80,14 +93,12 @@ local ABtoggle = ToolTab:CreateToggle({
       if ABBool then
          local destroyHeight = game.Workspace.FallenPartsDestroyHeight
          originalPos = LocalRoot.CFrame
-         LocalRoot.CFrame = CFrame.new(10^10, destroyHeight+1, 10^10) * CFrame.fromEulerAngles(math.rad(90), 0, 0)
+         LocalRoot.CFrame = CFrame.new(10^10, destroyHeight+1, 10^10) * CFrame.fromEulerAngles(math.rad(ABDegree), 0, 0)
          task.wait(0.05) LocalRoot.Anchored = true
       else
          if originalPos ~= nil then
             LocalRoot.CFrame = originalPos
             LocalRoot.Anchored = false
-            LocalPlayer.Character.Humanoid.PlatformStand = true
-            LocalPlayer.Character.Humanoid.PlatformStand = false
          end
       end
    end,
