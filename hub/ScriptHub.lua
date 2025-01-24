@@ -70,7 +70,7 @@ local Idk = MenuTab:CreateButton({
 })
 
 local ToolTab = Window:CreateTab("Tools", "wrench")
-
+ABDegree = 90
 local FaceDownToggle = ToolTab:CreateToggle({
    Name = "Look down AntiBang",
    CurrentValue = false,
@@ -93,7 +93,7 @@ local ABtoggle = ToolTab:CreateToggle({
       if ABBool then
          local destroyHeight = game.Workspace.FallenPartsDestroyHeight
          originalPos = LocalRoot.CFrame
-         LocalRoot.CFrame = CFrame.new(10^10, destroyHeight+1, 10^10) * CFrame.fromEulerAngles(math.rad(ABDegree), 0, 0)
+         LocalRoot.CFrame = CFrame.new(10^3, destroyHeight+1, 10^3) * CFrame.fromEulerAngles(math.rad(ABDegree), 0, 0)
          task.wait(0.05) LocalRoot.Anchored = true
       else
          if originalPos ~= nil then
