@@ -80,12 +80,13 @@ local ABtoggle = ToolTab:CreateToggle({
       if ABBool then
          local destroyHeight = game.Workspace.FallenPartsDestroyHeight
          originalPos = LocalRoot.CFrame
-         LocalRoot.CFrame = CFrame.new(0, destroyHeight+1, 0) * CFrame.fromEulerAngles(math.rad(90), 0, 0)
+         LocalRoot.CFrame = CFrame.new(10^10, destroyHeight+1, 10^10) * CFrame.fromEulerAngles(math.rad(90), 0, 0)
          task.wait(0.05) LocalRoot.Anchored = true
       else
          if originalPos ~= nil then
             LocalRoot.CFrame = originalPos
             LocalRoot.Anchored = false
+            LocalPlayer.Character.Humanoid.PlatformStand = false
          end
       end
    end,
