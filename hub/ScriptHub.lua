@@ -1,6 +1,10 @@
 -- w.i.p.
 Players = game:GetService('Players')
 LocalPlayer = Players.LocalPlayer
+function LocalRoot()
+   return(LocalPlayer.Character.HumanoidRootPart)
+end
+
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
@@ -89,17 +93,28 @@ local ABtoggle = ToolTab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(ABBool)
-      LocalRoot = LocalPlayer.Character.HumanoidRootPart
       if ABBool then
          local destroyHeight = game.Workspace.FallenPartsDestroyHeight
-         originalPos = LocalRoot.CFrame
-         LocalRoot.CFrame = CFrame.new(10^3, destroyHeight+1, 10^3) * CFrame.fromEulerAngles(math.rad(ABDegree), 0, 0)
-         task.wait(0.05) LocalRoot.Anchored = true
+         local originalPos = LocalRoot().CFrame
+         LocalRoot().CFrame = CFrame.new(10^4, destroyHeight+1, 10^4) * CFrame.fromEulerAngles(math.rad(ABDegree), 0, 0)
+         task.wait(0.05) LocalRoot().Anchored = true
       else
          if originalPos ~= nil then
-            LocalRoot.CFrame = originalPos
-            LocalRoot.Anchored = false
+            LocalRoot().CFrame = originalPos
+            LocalRoot().Anchored = false
          end
       end
+   end,
+})
+
+local StrollerBanish = ToolTab:CreateButton({
+   Name = "Stroller Banish(get someone first)",
+   Callback = function()
+      local originalPos = LocalRoot().CFrame
+      LocalRoot().CFrame = CFrame.new(0, 10^10, 0)
+      task.wait(0.5)
+      LocalPlayer.Character.Humanoid:UnequipTools()
+      task.wait(0.2)
+      LocalRoot().CFrame = originalPos
    end,
 })
