@@ -51,7 +51,7 @@ local copyDc = InfoTab:CreateButton({
             setclipboard("https://discord.gg/3wdGWjy5UJ")
                end,
 })
-local MrWasheeWashee = InfoTab:CreateLabel("how do i remove him", 4483362458, Color3.fromRGB(150, 50, 50), false) -- Title, Icon, Color, IgnoreTheme
+local MrWasheeWashee = InfoTab:CreateLabel("how do i remove him", 74009893966530, Color3.fromRGB(150, 50, 50), false) -- Title, Icon, Color, IgnoreTheme
 
 local MenuTab = Window:CreateTab("Menus/Admins/Hubs", "app-window")
 
