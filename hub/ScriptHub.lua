@@ -133,3 +133,4 @@ local game3199 = ssTab:CreateButton({
       loadstring(game:HttpGet('https://raw.githubusercontent.com/Slavik728/eQploit/refs/heads/main/hub/subscripts/scp3199.lua'))
    end,
 })
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Slavik728/eQploit/refs/heads/main/hub/subscripts/scp3199.lua'))

@@ -1,1 +1,1 @@
-local Tab = getgenv().eQhubWindow:CreateTab("SCP: 3199 Demonstration", 607948062)
+local scpTab = getgenv().eQhubWindow:CreateTab("SCP: 3199 Demonstration", 607948062)
