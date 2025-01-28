@@ -8,7 +8,7 @@ end
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-local _G.eQHubWindow = Rayfield:CreateWindow({
+local Window = Rayfield:CreateWindow({
    Name = "eQhub",
    Icon = 114282498599210, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "eQploit hub",
@@ -41,6 +41,8 @@ local _G.eQHubWindow = Rayfield:CreateWindow({
       Key = {"key"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
+
+_G.eQhubWindow = Window
 
 local InfoTab = _G.eQhubWindow:CreateTab("Info", "info")
 
@@ -125,7 +127,7 @@ local ssTab = _G.eQhubWindow:CreateTab("Subscripts", 'list-tree')
 
 local sseLabel = ssTab:CreateLabel("Subscripts are scripts for games that automatically add themselves as a tab in eQhub.", 'info', Color3.fromRGB(0, 50, 0), false) -- Title, Icon, Color, IgnoreTheme
 
-local game3199 = sseLabelTab:CreateButton({
+local game3199 = ssTab:CreateButton({
    Name = "SCP: 3199 Demonstration",
    Callback = function()-- The function that takes place when the button is pressed
       loadstring(game:HttpGet('https://raw.githubusercontent.com/Slavik728/eQploit/refs/heads/main/hub/subscripts/scp3199.lua'))
