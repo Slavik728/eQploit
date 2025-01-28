@@ -42,9 +42,9 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-_G.eQhubWindow = Window
+getgenv().eQhubWindow = Window
 
-local InfoTab = _G.eQhubWindow:CreateTab("Info", "info")
+local InfoTab = getgenv().eQhubWindow:CreateTab("Info", "info")
 
 local YruLabel = InfoTab:CreateLabel("You are currently using eQploit team's script hub", 114282498599210, Color3.fromRGB(50, 50, 150), false) -- Title, Icon, Color, IgnoreTheme
 local copyDc = InfoTab:CreateButton({
@@ -55,7 +55,7 @@ local copyDc = InfoTab:CreateButton({
 })
 local MrWasheeWashee = InfoTab:CreateLabel("how do i remove him", 74009893966530, Color3.fromRGB(150, 50, 50), false) -- Title, Icon, Color, IgnoreTheme
 
-local MenuTab = _G.eQhubWindow:CreateTab("Menus/Admins/Hubs", "app-window")
+local MenuTab = getgenv().eQhubWindow:CreateTab("Menus/Admins/Hubs", "app-window")
 
 local IY = MenuTab:CreateButton({
       Name = "Infinite Yield",
@@ -76,7 +76,7 @@ local Idk = MenuTab:CreateButton({
    end,
 })
 
-local ToolTab = _G.eQhubWindow:CreateTab("Tools", "wrench")
+local ToolTab = getgenv().eQhubWindow:CreateTab("Tools", "wrench")
 ABDegree = 90
 local FaceDownToggle = ToolTab:CreateToggle({
    Name = "Look down AntiBang",
@@ -123,7 +123,7 @@ local StrollerBanish = ToolTab:CreateButton({
    end,
 })
 
-local ssTab = _G.eQhubWindow:CreateTab("Subscripts", 'list-tree')
+local ssTab = getgenv().eQhubWindow:CreateTab("Subscripts", 'list-tree')
 
 local sseLabel = ssTab:CreateLabel("Subscripts are scripts for games that automatically add themselves as a tab in eQhub.", 'info', Color3.fromRGB(0, 50, 0), false) -- Title, Icon, Color, IgnoreTheme
 
