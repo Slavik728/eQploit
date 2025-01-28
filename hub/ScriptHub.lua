@@ -42,9 +42,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-getgenv().eQhubWindow = Window
-
-local InfoTab = getgenv().eQhubWindow:CreateTab("Info", "info")
+local InfoTab = Window:CreateTab("Info", "info")
 
 local YruLabel = InfoTab:CreateLabel("You are currently using eQploit team's script hub", 114282498599210, Color3.fromRGB(50, 50, 150), false) -- Title, Icon, Color, IgnoreTheme
 local copyDc = InfoTab:CreateButton({
@@ -55,7 +53,7 @@ local copyDc = InfoTab:CreateButton({
 })
 local MrWasheeWashee = InfoTab:CreateLabel("how do i remove him", 74009893966530, Color3.fromRGB(150, 50, 50), false) -- Title, Icon, Color, IgnoreTheme
 
-local MenuTab = getgenv().eQhubWindow:CreateTab("Menus/Admins/Hubs", "app-window")
+local MenuTab = Window:CreateTab("Menus/Admins/Hubs", "app-window")
 
 local IY = MenuTab:CreateButton({
       Name = "Infinite Yield",
@@ -76,7 +74,7 @@ local Idk = MenuTab:CreateButton({
    end,
 })
 
-local ToolTab = getgenv().eQhubWindow:CreateTab("Tools", "wrench")
+local ToolTab = Window:CreateTab("Tools", "wrench")
 ABDegree = 90
 local FaceDownToggle = ToolTab:CreateToggle({
    Name = "Look down AntiBang",
@@ -123,7 +121,7 @@ local StrollerBanish = ToolTab:CreateButton({
    end,
 })
 
-local ssTab = getgenv().eQhubWindow:CreateTab("Games", 'gamepad-2')
+local ssTab = Window:CreateTab("Games", 'gamepad-2')
 
 local sseLabel = ssTab:CreateLabel("Click the search button on top in this tab to search for a specific game", 'info', Color3.fromRGB(0, 50, 0), false) -- Title, Icon, Color, IgnoreTheme
 
