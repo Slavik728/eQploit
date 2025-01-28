@@ -125,12 +125,7 @@ local StrollerBanish = ToolTab:CreateButton({
 
 local ssTab = getgenv().eQhubWindow:CreateTab("Subscripts", 'list-tree')
 
-local sseLabel = ssTab:CreateLabel("Subscripts are scripts for games that automatically add themselves as a tab in eQhub.", 'info', Color3.fromRGB(0, 50, 0), false) -- Title, Icon, Color, IgnoreTheme
+local sseLabel = ssTab:CreateLabel("Click the search button on top in this tab to search for a specific game", 'info', Color3.fromRGB(0, 50, 0), false) -- Title, Icon, Color, IgnoreTheme
 
-local game3199 = ssTab:CreateButton({
-   Name = "SCP: 3199 Demonstration",
-   Callback = function()-- The function that takes place when the button is pressed
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/Slavik728/eQploit/refs/heads/main/hub/subscripts/scp3199.lua'))
-   end,
-})
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Slavik728/eQploit/refs/heads/main/hub/subscripts/scp3199.lua'))
+local scp3199sec = ssTab:CreateSection("SCP: 3199 Demonstration")
+
