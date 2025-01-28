@@ -123,7 +123,7 @@ local StrollerBanish = ToolTab:CreateButton({
    end,
 })
 
-local ssTab = getgenv().eQhubWindow:CreateTab("Subscripts", 'list-tree')
+local ssTab = getgenv().eQhubWindow:CreateTab("Games", 'gamepad-2')
 
 local sseLabel = ssTab:CreateLabel("Click the search button on top in this tab to search for a specific game", 'info', Color3.fromRGB(0, 50, 0), false) -- Title, Icon, Color, IgnoreTheme
 
