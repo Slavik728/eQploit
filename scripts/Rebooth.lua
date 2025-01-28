@@ -13,7 +13,7 @@ function BoothUpd(BOOTH_text, BOOTH_image)
 		[2] = BOOTH_text,
 		[3] = tostring(string.gsub(tostring(BOOTH_image), "%D", "")) or "0"
 	}
-	game:GetService("ReplicatedStorage").Remotes.BoothFunc:InvokeServer(unpack(args))
+	game:GetService("ReplicatedStorage").Remotes.Booth.BoothFunc:InvokeServer(unpack(args))
 end
 
 --[[
