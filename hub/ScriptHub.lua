@@ -96,7 +96,7 @@ local ABtoggle = ToolTab:CreateToggle({
    Callback = function(ABBool)
       if ABBool then
          local destroyHeight = game.Workspace.FallenPartsDestroyHeight
-         local originalPos = LocalRoot().CFrame
+         originalPos = LocalRoot().CFrame
          LocalRoot().CFrame = CFrame.new(10^4, destroyHeight+1, 10^4) * CFrame.fromEulerAngles(math.rad(ABDegree), 0, 0)
          task.wait(0.05) LocalRoot().Anchored = true
       else
