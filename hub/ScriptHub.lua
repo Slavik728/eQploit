@@ -5,7 +5,6 @@ function LocalRoot()
    return(LocalPlayer.Character.HumanoidRootPart)
 end
 
-
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
@@ -51,6 +50,15 @@ local copyDc = InfoTab:CreateButton({
             setclipboard("https://discord.gg/3wdGWjy5UJ")
                end,
 })
+
+local switch = InfoTab:CreateButton({
+   Name = "New repo(copy and exec)",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Slavik728/eQ/refs/heads/main/scripts/hub.lua'))()
+      toclipboard('https://raw.githubusercontent.com/Slavik728/eQ/refs/heads/main/scripts/hub.lua')
+   end,
+})
+
 local MrWasheeWashee = InfoTab:CreateLabel("how do i remove him", 74009893966530, Color3.fromRGB(150, 50, 50), false) -- Title, Icon, Color, IgnoreTheme
 
 local MenuTab = Window:CreateTab("Menus/Admins/Hubs", "app-window")
