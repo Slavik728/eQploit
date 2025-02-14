@@ -55,7 +55,7 @@ local switch = InfoTab:CreateButton({
    Name = "New repo(copy and exec)",
    Callback = function()
       loadstring(game:HttpGet('https://raw.githubusercontent.com/Slavik728/eQ/refs/heads/main/scripts/hub.lua'))()
-      toclipboard('https://raw.githubusercontent.com/Slavik728/eQ/refs/heads/main/scripts/hub.lua')
+      toclipboard('loadstring(game:HttpGet(\'https://raw.githubusercontent.com/Slavik728/eQ/refs/heads/main/scripts/hub.lua\'))()')
    end,
 })
 
